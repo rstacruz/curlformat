@@ -4,6 +4,10 @@ var extend = require('util')._extend;
 function Request (args) {
   var self = this;
 
+  // workaround
+  if (args._ && args._[0] === 'curl')
+    args._ = args._.slice(1);
+
   this.data = {};
   this.method = 'GET';
   this.url = args._[0];
@@ -18,7 +22,7 @@ function Request (args) {
       }, {}));
   }
 
-  if (args.simple) {
+  if (!args.extended) {
     Request.ignoreHeaders.forEach(function (key) {
       delete(self.headers[key]);
     });
@@ -34,8 +38,9 @@ function Request (args) {
   }
 
   if (~this.url.indexOf('?')) {
-    var qs = this.url.split('?')[1];
-    extend(this.data, qsparse(qs));
+    var qs = this.url.split('?');
+    this.url = qs[0];
+    extend(this.data, qsparse(qs[1]));
   }
 
   if (args.request)
@@ -59,13 +64,13 @@ Request.prototype.toString = function () {
 
   if (self.data) {
     Object.keys(self.data).forEach(function (key) {
-      args.push('  ' + key + '=' + self.data[key]);
+      args.push('  ' + key + '=' + quote(self.data[key]));
     });
   }
 
   if (self.headers) {
     Object.keys(self.headers).forEach(function (key) {
-      args.push('  ' + key + ':' + self.headers[key]);
+      args.push('  ' + key + ':' + quote(self.headers[key]));
     });
   }
     
@@ -81,4 +86,8 @@ function toArr (val) {
   if (Array.isArray(val)) return val;
   if (!val) return [];
   else return [val];
+}
+
+function quote (str) {
+  return JSON.stringify(str);
 }
