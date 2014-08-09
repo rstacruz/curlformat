@@ -31,3 +31,15 @@ $ http OPTIONS 'http://site.com/users' \
    User-Agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:31.0) Gecko/20100101 Firefox/31.0" \
    Host:"staging.tripid.com.ph"
 ```
+
+## :copyright:
+
+**curlformat** © 2014+, Rico Sta. Cruz. Released under the [MIT License].<br>
+Authored and maintained by Rico Sta. Cruz with help from [contributors].
+
+> [ricostacruz.com](http://ricostacruz.com) &nbsp;&middot;&nbsp;
+> GitHub [@rstacruz](https://github.com/rstacruz) &nbsp;&middot;&nbsp;
+> Twitter [@rstacruz](https://twitter.com/rstacruz)
+
+[MIT License]: http://mit-license.org/
+[contributors]: http://github.com/rstacruz/curlformat/contributors
