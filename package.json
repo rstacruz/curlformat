@@ -7,7 +7,8 @@
     "test": "mocha"
   },
   "bin": {
-    "fcurl": "./bin/fcurl"
+    "fcurl": "./bin/fcurl",
+    "ffcurl": "./bin/ffcurl"
   },
   "author": "Rico Sta. Cruz <hi@ricostacruz.com>",
   "license": "MIT",

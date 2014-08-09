@@ -19,6 +19,7 @@ if (args.help || !args._[0]) {
       'Options:',
       '    -h, --help         print usage information',
       '    -v, --version      show version info and exit',
+      '        --extended     show more stuff',
       '',
       'Curl options:',
       '    -H, --header       ...',
