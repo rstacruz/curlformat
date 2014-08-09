@@ -1,4 +1,4 @@
-# curlformat
+# npm install -g curlformat
 
 I like to do this in Firefox or Chrome. The output is unreadable though.
 
