@@ -15,12 +15,12 @@ $ fcurl 'http://site.com/article/new' -H 'Host: site.com' -H 'Connection:
 keep-alive' -H 'Accept-Language: en-us' -d "title=Hello&body=Welcome%20to%20" ...
 ```
 
-BAM! Now readable!
+BAM! Now its readable!
 
 ```sh
-$ http POST "http://site.com/article/new" \
-    title="Hello" \
-    body="Welcome to my site!"
+http POST "http://site.com/article/new" \
+  title="Hello" \
+  body="Welcome to my site!"
 ```
 
 That's sweet.
@@ -29,12 +29,12 @@ That's sweet.
 I know. Now pass `--extended` to make print more stuff that would've been supressed.
 
 ```sh
-$ http OPTIONS "http://site.com/users" \
-   Connection:"keep-alive" \
-   Access-Control-Request-Method:"GET" \
-   Origin:"http://site.com" \
-   Accept-Encoding:"gzip, deflate" \
-   ...
+http OPTIONS "http://site.com/users" \
+  Connection:"keep-alive" \
+  Access-Control-Request-Method:"GET" \
+  Origin:"http://site.com" \
+  Accept-Encoding:"gzip, deflate" \
+  ...
 ```
 
 Cool beans
