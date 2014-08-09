@@ -1,0 +1,17 @@
+{
+  "name": "curlformat",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "bin": {
+    "fcurl": "./bin/fcurl"
+  },
+  "author": "Rico Sta. Cruz <hi@ricostacruz.com>",
+  "license": "MIT",
+  "dependencies": {
+    "minimist": "^0.2.0"
+  }
+}
