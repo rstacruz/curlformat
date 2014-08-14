@@ -29,7 +29,10 @@ function Request (args) {
   }
 
   if (args.data) {
-    extend(this.data, qsparse(args.data));
+    if (args.data.match(/^[\{\[].*[\]\}]$/))
+      extend(this.data, JSON.parse(args.data));
+    else
+      extend(this.data, qsparse(args.data));
     this.method = 'POST';
   }
 
