@@ -1,6 +1,6 @@
 {
   "name": "curlformat",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "CLI utility to clean up your 'Copy as cURL' strings",
   "main": "index.js",
   "scripts": {
