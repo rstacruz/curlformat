@@ -57,7 +57,7 @@ Request.ignoreHeaders = [
 ];
 
 Request.prototype.toString = function () {
-  var cmd = 'http ' + this.method + ' ' + this.url;
+  var cmd = 'http ' + this.method + ' ' + quote(this.url);
   var cr = ' \\\n';
   var args = [];
   var self = this;
