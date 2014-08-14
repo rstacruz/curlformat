@@ -1,3 +1,8 @@
+## v0.1.0
+
+* Support JSON data.
+* Ignore Content-Length header.
+
 ## v0.0.2 - August 13, 2014
 
 * Quote URLs.

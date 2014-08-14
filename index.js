@@ -56,7 +56,7 @@ function Request (args) {
 Request.ignoreHeaders = [
   'Host', 'User-Agent', 'Accept', 'Accept-Language', 'Accept-Encoding',
   'Origin', 'Connection', 'X-Requested-With', 'Content-Type', 'Pragma',
-  'Cache-Control', 'Referer', 'Cookie'
+  'Cache-Control', 'Referer', 'Cookie', 'Content-Length'
 ];
 
 Request.prototype.toString = function () {
